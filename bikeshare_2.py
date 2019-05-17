@@ -40,7 +40,7 @@ def get_filters():
     # get user input for day of week (all, monday, tuesday, ... sunday)
     days=['saturday','sunday','monday','tuesday','wednesday','thursday','friday']
     while True:
-            day = input("Enter the day:.\nSaturday , Sunday , Monday , Tuesday , Wednesday , Thursday , Friday , All):.\n").lower()
+            day = input("Type the day:.\n1.Saturday , 2.Sunday , 3.Monday , 4.Tuesday , 5.Wednesday , 6.Thursday , 7.Friday , All):.\n").lower()
             if day in days or day == 'all':
                 break
 
