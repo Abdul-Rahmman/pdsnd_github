@@ -76,12 +76,12 @@ def load_data(city, month, day):
     if day !='all':
         df= df[df['day_of_week'] == day.title()]
 
-    #print 5 col at a time
-    i = 0
+    #print 10 col at a time
+    i = 1
     while i < df.size:
         print(df.loc[i])
         i += 1
-        if i % 5 == 0:
+        if i % 10 == 0:
             ino = input("Enter no to exit or press Enter to continue").lower()
             if ino == 'no':
                 break
