@@ -8,8 +8,8 @@ psnd_github
 Describe what your project is about and what it does
 
 ### Files used
-csv data files + python 
+csv data files + python . 
 
 ### Credits
-Udacity + richard
+Udacity + richard .
 
