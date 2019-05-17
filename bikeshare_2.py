@@ -1,4 +1,3 @@
-import statistics
 import time
 import pandas as pd
 import numpy as np
@@ -20,7 +19,7 @@ def get_filters():
     print('Hello! Let\'s explore some US bikeshare data!')
     # get user input for city (chicago, new york, washington). HINT: Use a while loop to handle invalid inputs
     while True:
-        city = input("Enter the city:.\n Chicago , New York , Washington\n ").lower()
+        city = input("Enter the city:.\n 1.Chicago , 2.New York , 3.Washington\n ").lower()
         if city in CITY_DATA:
             break
         else:
@@ -29,7 +28,7 @@ def get_filters():
     # get user input for month (all, january, february, ... , june)
     months=['january','february','march','april','may','june','july','august','september','october','november','december']
     while True:
-        month = input("Enter the month:.\nJanuary , February , March , April\nMay , June , July, August\nSeptember , October, November, December,\n\t\tAll ").lower()
+        month = input("Type the month:.\n1.January , 2.February , 3.March , 4.April\n5.May , 6.June , 7.July, 8.August\n9.September , 10.October, 11.November, 12.December,\n\t\tAll ").lower()
 
         if month in months or month =='all':
             break
@@ -41,7 +40,7 @@ def get_filters():
     # get user input for day of week (all, monday, tuesday, ... sunday)
     days=['saturday','sunday','monday','tuesday','wednesday','thursday','friday']
     while True:
-            day = input("Enter the day:.\nSaturday , Sunday , Monday , Tuesday , Wednesday , Thursday , Friday , All):.\n").lower()
+            day = input("Type the day:.\n1.Saturday , 2.Sunday , 3.Monday , 4.Tuesday , 5.Wednesday , 6.Thursday , 7.Friday , All):.\n").lower()
             if day in days or day == 'all':
                 break
 
@@ -77,12 +76,12 @@ def load_data(city, month, day):
     if day !='all':
         df= df[df['day_of_week'] == day.title()]
 
-    #print 5 col at a time
-    i = 0
+    #print 10 col at a time
+    i = 1
     while i < df.size:
         print(df.loc[i])
         i += 1
-        if i % 5 == 0:
+        if i % 10 == 0:
             ino = input("Enter no to exit or press Enter to continue").lower()
             if ino == 'no':
                 break
